@@ -1,6 +1,8 @@
 <template>
   <div id="app" style="width:100%;height:100%">
-    <gantt-elastic :tasks="tasks" :options="options" />
+    <gantt-elastic :tasks="tasks" :options="options">
+      <gantt-header slot="header"></gantt-header>
+    </gantt-elastic>
     <div>Tasks: {{ tasks.length }}</div>
   </div>
 </template>
