@@ -8,11 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "dayjs": "^1.8.11",
     "gantt-elastic": "^0.10.16",
-    "vue": "^2.6.6",
-    "vuex": "^3.1.0",
+    "vue": "^2.6.10",
     "vue-slider-component": "^2.8.14",
-    "vue-switches": "^2.0.1"
+    "vue-switches": "^2.0.1",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
@@ -22,7 +23,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,
