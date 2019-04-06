@@ -19,41 +19,27 @@
 
     <q-drawer v-model="leftDrawerOpen" bordered content-class="bg-grey-2">
       <q-list>
-        <q-item
-          clickable
-          tag="a"
-          target="_blank"
-          href="https://github.com/neuronetio/gantt-elastic"
-        >
+        <q-item clickable @click="$router.push('/')">
           <q-item-section avatar>
             <q-icon name="mdi-code-tags" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Github</q-item-label>
-            <q-item-label caption
-              >github.com/neuronetio/gantt-elastic</q-item-label
-            >
+            <q-item-label>Demo</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item
-          clickable
-          tag="a"
-          target="_blank"
-          href="https://github.com/neuronetio/gantt-elastic/wiki"
-        >
+        <q-item clickable @click="$router.push('/info')">
           <q-item-section avatar>
             <q-icon name="mdi-file-document-box-multiple" />
           </q-item-section>
           <q-item-section>
             <q-item-label>Documentation</q-item-label>
-            <q-item-label caption>WIKI</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
     </q-drawer>
 
     <q-page-container>
-      <Gantt />
+      <router-view />
     </q-page-container>
   </q-layout>
 </template>
@@ -63,11 +49,6 @@ import Gantt from "./components/Gantt.vue";
 
 export default {
   name: "LayoutDefault",
-
-  components: {
-    Gantt
-  },
-
   data() {
     return {
       leftDrawerOpen: false
