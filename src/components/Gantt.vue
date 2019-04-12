@@ -307,7 +307,7 @@ let options = {
     ]
   },
   locale: {
-    code: "en",
+    name: "en",
     Now: "Now",
     "X-Scale": "Zoom-X",
     "Y-Scale": "Zoom-Y",
