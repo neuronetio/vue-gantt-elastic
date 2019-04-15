@@ -10,7 +10,7 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "dayjs": "^1.8.12",
-    "gantt-elastic": "^0.12.6",
+    "gantt-elastic": "^0.12.8",
     "quasar": "^1.0.0-beta.16",
     "vue": "^2.6.10",
     "vue-router": "^3.0.4",
