@@ -10,8 +10,8 @@
 </style>
 
 <script>
-import GanttElastic from "gantt-elastic/src/GanttElastic.vue";
-import GanttHeader from "gantt-elastic/src/components/Header.vue";
+import GanttElastic from "gantt-elastic";
+import GanttHeader from "gantt-elastic-header";
 import dayjs from "dayjs";
 
 // just helper to get current dates
