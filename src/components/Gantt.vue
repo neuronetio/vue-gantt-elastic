@@ -3,6 +3,8 @@
     <gantt-elastic :options="options" :tasks="tasks">
       <gantt-header slot="header"></gantt-header>
     </gantt-elastic>
+    <div class="q-mt-md" />
+    <q-btn @click="addTask" icon="mdi-plus" label="Add task" />
   </q-page>
 </template>
 
@@ -224,7 +226,7 @@ let options = {
     progress: "percent"
   },
   maxRows: 100,
-  maxHeight: 300,
+  maxHeight: 500,
   title: {
     label: "Your project title as html (link or whatever...)",
     html: false
@@ -326,8 +328,24 @@ export default {
   data() {
     return {
       tasks,
-      options
+      options,
+      lastId: 16
     };
+  },
+  methods: {
+    addTask() {
+      this.tasks.push({
+        id: this.lastId++,
+        label:
+          '<a href="https://images.pexels.com/photos/423364/pexels-photo-423364.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" target="_blank" style="color:#0077c0;">Yeaahh! you have added a task bro!</a>',
+        user:
+          '<a href="https://images.pexels.com/photos/423364/pexels-photo-423364.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" target="_blank" style="color:#0077c0;">Awesome!</a>',
+        start: getDate(24 * 3),
+        duration: 1 * 24 * 60 * 60 * 1000,
+        percent: 50,
+        type: "project"
+      });
+    }
   }
 };
 </script>
