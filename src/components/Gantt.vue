@@ -1,6 +1,11 @@
 <template>
   <q-page class="q-pa-sm">
-    <gantt-elastic :options="options" :tasks="tasks">
+    <gantt-elastic
+      :options="options"
+      :tasks="tasks"
+      @tasks-updated="tasksUpdate"
+      @options-updated="optionsUpdate"
+    >
       <gantt-header slot="header"></gantt-header>
     </gantt-elastic>
     <div class="q-mt-md" />
@@ -345,6 +350,12 @@ export default {
         percent: 50,
         type: "project"
       });
+    },
+    tasksUpdate(tasks) {
+      this.tasks = tasks;
+    },
+    optionsUpdate(options) {
+      this.options = options;
     }
   }
 };
