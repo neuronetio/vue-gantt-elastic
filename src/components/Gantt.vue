@@ -3,8 +3,8 @@
     <gantt-elastic
       :options="options"
       :tasks="tasks"
-      @tasks-updated="tasksUpdate"
-      @options-updated="optionsUpdate"
+      @tasks-changed="tasksUpdate"
+      @options-changed="optionsUpdate"
     >
       <gantt-header slot="header"></gantt-header>
     </gantt-elastic>
